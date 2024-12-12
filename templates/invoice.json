@@ -1,0 +1,72 @@
+{
+  "dataPack": {
+    "@version": "2.0",
+    "@xmlns:dat": "http://www.stormware.cz/schema/version_2/data.xsd",
+    "@xmlns:inv": "http://www.stormware.cz/schema/version_2/invoice.xsd",
+    "@xmlns:typ": "http://www.stormware.cz/schema/version_2/type.xsd",
+    "dataPackItem": {
+      "@version": "2.0",
+      "@id": "INV001",
+      "invoice": {
+        "@version": "2.0",
+        "invoiceHeader": {
+          "invoiceType": "issuedInvoice",
+          "number": {
+            "numberRequested": "2024001"
+          },
+          "symVar": "2024001",
+          "date": "2024-01-15",
+          "dateTax": "2024-01-15",
+          "dateAccounting": "2024-01-15",
+          "dateDue": "2024-01-29",
+          "text": "Invoice for services",
+          "partnerIdentity": {
+            "address": {
+              "company": "Sample Company",
+              "name": "John Doe",
+              "city": "Prague",
+              "street": "Example Street 123",
+              "zip": "12345",
+              "ico": "12345678",
+              "dic": "CZ12345678"
+            }
+          },
+          "paymentType": {
+            "paymentType": "transfer"
+          }
+        },
+        "invoiceDetail": {
+          "invoiceItem": [
+            {
+              "text": "Service Item 1",
+              "quantity": 1,
+              "unit": "pcs",
+              "payVAT": false,
+              "rateVAT": "high",
+              "homeCurrency": {
+                "unitPrice": 1000.00,
+                "price": 1000.00,
+                "priceVAT": 210.00,
+                "priceSum": 1210.00
+              }
+            }
+          ]
+        },
+        "invoiceSummary": {
+          "roundingDocument": "math2one",
+          "roundingVAT": "none",
+          "homeCurrency": {
+            "priceNone": 0.00,
+            "priceLow": 0.00,
+            "priceLowVAT": 0.00,
+            "priceLowSum": 0.00,
+            "priceHigh": 1000.00,
+            "priceHighVAT": 210.00,
+            "priceHighSum": 1210.00,
+            "round": 0.00
+          }
+        }
+      }
+    }
+  }
+}
